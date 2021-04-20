@@ -1,0 +1,22 @@
+# OfferUpdate
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** |  | 
+**label** | **str** |  | 
+**description** | **str** |  | 
+**product_id** | **str** |  | 
+**version** | **int** |  | 
+**display_order** | **int** |  | 
+**image** | **str** |  | 
+**supported_properties** | **[str]** |  | 
+**supported_options** | [**[NameValue]**](NameValue.md) |  | 
+**price** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
+**approvals** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
