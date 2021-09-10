@@ -1,6 +1,6 @@
 # python_msx_sdk.WorkflowsApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,10 +28,10 @@ import python_msx_sdk
 from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -95,10 +95,10 @@ import python_msx_sdk
 from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -164,10 +164,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.workflow import Workflow
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -233,10 +233,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.workflow_start_config import WorkflowStartConfig
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -302,10 +302,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.workflow import Workflow
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -373,10 +373,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.workflow_mapping import WorkflowMapping
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -384,7 +384,9 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workflows_api.WorkflowsApi(api_client)
-    request_body = {} # {str: (bool, date, datetime, dict, float, int, list, str, none_type)} | 
+    request_body = {
+        "key": None,
+    } # {str: (bool, date, datetime, dict, float, int, list, str, none_type)} | 
     tenant_ids = [
         "tenantIds_example",
     ] # [str] |  (optional)
@@ -457,10 +459,10 @@ from python_msx_sdk.model.start_workflow_response import StartWorkflowResponse
 from python_msx_sdk.model.workflow_start_config import WorkflowStartConfig
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -545,10 +547,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.workflow_mapping import WorkflowMapping
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -557,9 +559,11 @@ with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workflows_api.WorkflowsApi(api_client)
     id = "id_example" # str | 
-    request_body = {} # {str: (bool, date, datetime, dict, float, int, list, str, none_type)} | 
-    tenant_id = [
-        "tenantId_example",
+    request_body = {
+        "key": None,
+    } # {str: (bool, date, datetime, dict, float, int, list, str, none_type)} | 
+    tenant_ids = [
+        "tenantIds_example",
     ] # [str] |  (optional)
     _global = True # bool |  (optional)
 
@@ -575,7 +579,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # and optional values
     try:
         # Updates a workflow.
-        api_response = api_instance.update_workflow(id, request_body, tenant_id=tenant_id, _global=_global)
+        api_response = api_instance.update_workflow(id, request_body, tenant_ids=tenant_ids, _global=_global)
         pprint(api_response)
     except python_msx_sdk.ApiException as e:
         print("Exception when calling WorkflowsApi->update_workflow: %s\n" % e)
@@ -588,7 +592,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  |
  **request_body** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}**|  |
- **tenant_id** | **[str]**|  | [optional]
+ **tenant_ids** | **[str]**|  | [optional]
  **_global** | **bool**|  | [optional]
 
 ### Return type
@@ -630,10 +634,10 @@ from python_msx_sdk.api import workflows_api
 from python_msx_sdk.model.validate_workflow_response import ValidateWorkflowResponse
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 

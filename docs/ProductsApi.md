@@ -1,6 +1,6 @@
 # python_msx_sdk.ProductsApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from python_msx_sdk.model.product import Product
 from python_msx_sdk.model.product_create import ProductCreate
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -96,10 +96,10 @@ import python_msx_sdk
 from python_msx_sdk.api import products_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -164,10 +164,10 @@ from python_msx_sdk.api import products_api
 from python_msx_sdk.model.product import Product
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -233,10 +233,10 @@ from python_msx_sdk.api import products_api
 from python_msx_sdk.model.catalog_assignment import CatalogAssignment
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -301,10 +301,10 @@ import python_msx_sdk
 from python_msx_sdk.api import products_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -370,10 +370,10 @@ from python_msx_sdk.api import products_api
 from python_msx_sdk.model.products_page import ProductsPage
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -452,10 +452,10 @@ from python_msx_sdk.model.product import Product
 from python_msx_sdk.model.product_update import ProductUpdate
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -495,7 +495,9 @@ with python_msx_sdk.ApiClient() as api_client:
                     "allowed_option_values_example",
                 ],
                 allowed_values=[
-                    {},
+                    {
+                        "key": None,
+                    },
                 ],
                 mandatory=True,
                 section="section_example",
@@ -590,6 +592,9 @@ with python_msx_sdk.ApiClient() as api_client:
                 ),
             ],
         ),
+        tags=[
+            "tags_example",
+        ],
     ) # ProductUpdate | 
 
     # example passing only required values which don't have defaults set
@@ -649,10 +654,10 @@ from python_msx_sdk.api import products_api
 from python_msx_sdk.model.catalog_assignment import CatalogAssignment
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 

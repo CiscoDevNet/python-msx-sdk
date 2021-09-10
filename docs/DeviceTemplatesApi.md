@@ -1,10 +1,11 @@
 # python_msx_sdk.DeviceTemplatesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_device_template**](DeviceTemplatesApi.md#create_device_template) | **POST** /manage/api/v8/devicetemplates | Creates a device template.
+[**create_device_template_version**](DeviceTemplatesApi.md#create_device_template_version) | **POST** /manage/api/v8/devicetemplates/versions | Creates a new version of an existing device template.
 [**delete_device_template**](DeviceTemplatesApi.md#delete_device_template) | **DELETE** /manage/api/v8/devicetemplates/{id} | Deletes a device template.
 [**get_device_template**](DeviceTemplatesApi.md#get_device_template) | **GET** /manage/api/v8/devicetemplates/{id} | Returns a device template.
 [**get_device_templates_list**](DeviceTemplatesApi.md#get_device_templates_list) | **GET** /manage/api/v8/devicetemplates/list | Returns a list of device templates.
@@ -27,10 +28,10 @@ from python_msx_sdk.model.device_template import DeviceTemplate
 from python_msx_sdk.model.device_template_create import DeviceTemplateCreate
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -67,6 +68,9 @@ with python_msx_sdk.ApiClient() as api_client:
                 ],
                 tool_tip_text="tool_tip_text_example",
             ),
+        ],
+        tags=[
+            "tags_example",
         ],
     ) # DeviceTemplateCreate | 
 
@@ -111,6 +115,91 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_device_template_version**
+> DeviceTemplate create_device_template_version(device_template_version_create)
+
+Creates a new version of an existing device template.
+
+### Example
+
+```python
+import time
+import python_msx_sdk
+from python_msx_sdk.api import device_templates_api
+from python_msx_sdk.model.device_template import DeviceTemplate
+from python_msx_sdk.model.device_template_version_create import DeviceTemplateVersionCreate
+from python_msx_sdk.model.error import Error
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = python_msx_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with python_msx_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = device_templates_api.DeviceTemplatesApi(api_client)
+    device_template_version_create = DeviceTemplateVersionCreate(
+        name="name_example",
+        config_content="config_content_example",
+        template_parameter_validators=[
+            TemplateParameterValidator(
+                name="",
+                hint_text="",
+                label="",
+                type="Passwor",
+                display_type="Textare",
+                allowed_values=[
+                    "allowed_values_example",
+                ],
+                tool_tip_text="tool_tip_text_example",
+            ),
+        ],
+    ) # DeviceTemplateVersionCreate | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Creates a new version of an existing device template.
+        api_response = api_instance.create_device_template_version(device_template_version_create)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling DeviceTemplatesApi->create_device_template_version: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_template_version_create** | [**DeviceTemplateVersionCreate**](DeviceTemplateVersionCreate.md)|  |
+
+### Return type
+
+[**DeviceTemplate**](DeviceTemplate.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthenticated |  -  |
+**403** | Unauthorized |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_device_template**
 > delete_device_template(id)
 
@@ -124,10 +213,10 @@ import python_msx_sdk
 from python_msx_sdk.api import device_templates_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -192,10 +281,10 @@ from python_msx_sdk.api import device_templates_api
 from python_msx_sdk.model.device_template import DeviceTemplate
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -261,10 +350,10 @@ from python_msx_sdk.api import device_templates_api
 from python_msx_sdk.model.device_template import DeviceTemplate
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -272,6 +361,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = device_templates_api.DeviceTemplatesApi(api_client)
+    all_versions = False # bool |  (optional) if omitted the server will use the default value of False
     service_type = "manageddevice" # str |  (optional)
     tenant_id = "2664f157-18d8-4ecd-8c78-66b7cb7e1e25" # str |  (optional)
 
@@ -279,7 +369,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # and optional values
     try:
         # Returns a list of device templates.
-        api_response = api_instance.get_device_templates_list(service_type=service_type, tenant_id=tenant_id)
+        api_response = api_instance.get_device_templates_list(all_versions=all_versions, service_type=service_type, tenant_id=tenant_id)
         pprint(api_response)
     except python_msx_sdk.ApiException as e:
         print("Exception when calling DeviceTemplatesApi->get_device_templates_list: %s\n" % e)
@@ -290,6 +380,7 @@ with python_msx_sdk.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **all_versions** | **bool**|  | [optional] if omitted the server will use the default value of False
  **service_type** | **str**|  | [optional]
  **tenant_id** | **str**|  | [optional]
 
@@ -331,10 +422,10 @@ import python_msx_sdk
 from python_msx_sdk.api import device_templates_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -401,10 +492,10 @@ from python_msx_sdk.model.device_template_access import DeviceTemplateAccess
 from python_msx_sdk.model.device_template_access_response import DeviceTemplateAccessResponse
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 

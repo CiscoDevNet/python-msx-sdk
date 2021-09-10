@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **device_ids** | **[str]** |  | [optional] 
 **service_ids** | **[str]** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
 **type** | **str** |  | [optional] 
 **address** | [**SiteAddress**](SiteAddress.md) |  | [optional] 
 **contact** | [**SiteContact**](SiteContact.md) |  | [optional] 

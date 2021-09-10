@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
+**id** | **str, none_type** |  | [optional] 
 **schema_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 

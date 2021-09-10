@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **schema_id** | **str** |  | [optional] 
 **adapter_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**title** | **str** |  | [optional] 
+**title** | **str, none_type** |  | [optional] 
 **type** | **str** |  | [optional] 
 **base_type** | **str** |  | [optional] 
-**properties** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**properties** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | [optional] 
 **valid** | **bool** |  | [optional] 
 **def_access_meta** | [**WorkflowDefAccessMeta**](WorkflowDefAccessMeta.md) |  | [optional] 
 
