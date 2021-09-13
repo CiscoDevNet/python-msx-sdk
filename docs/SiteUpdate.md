@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
 **parent_id** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
 **type** | **str** |  | [optional] 
 **address** | [**SiteAddress**](SiteAddress.md) |  | [optional] 
 **contact** | [**SiteContact**](SiteContact.md) |  | [optional] 

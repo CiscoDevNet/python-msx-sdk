@@ -1,6 +1,6 @@
 # python_msx_sdk.RolesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,10 +22,10 @@ from python_msx_sdk.api import roles_api
 from python_msx_sdk.model.role import Role
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -91,10 +91,10 @@ from python_msx_sdk.api import roles_api
 from python_msx_sdk.model.role import Role
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 

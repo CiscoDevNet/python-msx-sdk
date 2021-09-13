@@ -6,7 +6,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from .api.device_templates_api import DeviceTemplatesApi
+#   from .api.auditing_generic_events_api import AuditingGenericEventsApi
 #
 # or import this package, but before doing it, use:
 #
@@ -14,6 +14,7 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
+from python_msx_sdk.api.auditing_generic_events_api import AuditingGenericEventsApi
 from python_msx_sdk.api.device_templates_api import DeviceTemplatesApi
 from python_msx_sdk.api.devices_api import DevicesApi
 from python_msx_sdk.api.health_api import HealthApi

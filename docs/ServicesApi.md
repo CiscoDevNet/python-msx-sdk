@@ -1,6 +1,6 @@
 # python_msx_sdk.ServicesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_services_page**](ServicesApi.md#get_services_page) | **GET** /manage/api/v8/services | Returns a page of services.
 [**submit_order**](ServicesApi.md#submit_order) | **POST** /manage/api/v8/services | Submits an order.
 [**update_order**](ServicesApi.md#update_order) | **PUT** /manage/api/v8/services | Updates an order.
+[**update_service**](ServicesApi.md#update_service) | **PUT** /manage/api/v8/services/{id} | Updates a service.
 
 
 # **delete_service**
@@ -24,10 +25,10 @@ import python_msx_sdk
 from python_msx_sdk.api import services_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -92,10 +93,10 @@ from python_msx_sdk.api import services_api
 from python_msx_sdk.model.service import Service
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -138,7 +139,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+**200** | OK |  -  |
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized |  -  |
 **404** | Not Found |  -  |
@@ -160,10 +161,10 @@ from python_msx_sdk.api import services_api
 from python_msx_sdk.model.services_page import ServicesPage
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -244,10 +245,10 @@ from python_msx_sdk.model.legacy_service_order import LegacyServiceOrder
 from python_msx_sdk.model.legacy_service_order_response import LegacyServiceOrderResponse
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -316,7 +317,9 @@ with python_msx_sdk.ApiClient() as api_client:
                                 name="name_example",
                                 model="model_example",
                                 type="type_example",
-                                device_attributes={},
+                                device_attributes={
+                                    "key": None,
+                                },
                                 device_onboarding=LegacySiteDeviceOnboard(
                                     device_instance_id="device_instance_id_example",
                                     tenant_id="tenant_id_example",
@@ -324,19 +327,29 @@ with python_msx_sdk.ApiClient() as api_client:
                                     managed=True,
                                     device_model="device_model_example",
                                     device_onboarding_type="device_onboarding_type_example",
-                                    device_onboard_information={},
+                                    device_onboard_information={
+                                        "key": None,
+                                    },
                                 ),
                                 delete=True,
                             ),
                         ],
-                        site_attributes={},
+                        site_attributes={
+                            "key": None,
+                        },
                         delete=True,
                         operational_status="operational_status_example",
                     ),
                 ],
-                offer_selection={},
-                service_instance_detail={},
-                price_detail={},
+                offer_selection={
+                    "key": None,
+                },
+                service_instance_detail={
+                    "key": None,
+                },
+                price_detail={
+                    "key": None,
+                },
                 dealer_code="dealer_code_example",
                 price_plan_id="price_plan_id_example",
                 terms_and_condition_id="terms_and_condition_id_example",
@@ -344,7 +357,9 @@ with python_msx_sdk.ApiClient() as api_client:
                     "key": "key_example",
                 },
             ),
-            service_downgrade={},
+            service_downgrade={
+                "key": None,
+            },
             nso_response_types=LegacyNsoResponseTypes(
                 create_operation="create_operation_example",
                 update_operation="update_operation_example",
@@ -412,10 +427,10 @@ from python_msx_sdk.model.legacy_service_order import LegacyServiceOrder
 from python_msx_sdk.model.legacy_service_order_response import LegacyServiceOrderResponse
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -484,7 +499,9 @@ with python_msx_sdk.ApiClient() as api_client:
                                 name="name_example",
                                 model="model_example",
                                 type="type_example",
-                                device_attributes={},
+                                device_attributes={
+                                    "key": None,
+                                },
                                 device_onboarding=LegacySiteDeviceOnboard(
                                     device_instance_id="device_instance_id_example",
                                     tenant_id="tenant_id_example",
@@ -492,19 +509,29 @@ with python_msx_sdk.ApiClient() as api_client:
                                     managed=True,
                                     device_model="device_model_example",
                                     device_onboarding_type="device_onboarding_type_example",
-                                    device_onboard_information={},
+                                    device_onboard_information={
+                                        "key": None,
+                                    },
                                 ),
                                 delete=True,
                             ),
                         ],
-                        site_attributes={},
+                        site_attributes={
+                            "key": None,
+                        },
                         delete=True,
                         operational_status="operational_status_example",
                     ),
                 ],
-                offer_selection={},
-                service_instance_detail={},
-                price_detail={},
+                offer_selection={
+                    "key": None,
+                },
+                service_instance_detail={
+                    "key": None,
+                },
+                price_detail={
+                    "key": None,
+                },
                 dealer_code="dealer_code_example",
                 price_plan_id="price_plan_id_example",
                 terms_and_condition_id="terms_and_condition_id_example",
@@ -512,7 +539,9 @@ with python_msx_sdk.ApiClient() as api_client:
                     "key": "key_example",
                 },
             ),
-            service_downgrade={},
+            service_downgrade={
+                "key": None,
+            },
             nso_response_types=LegacyNsoResponseTypes(
                 create_operation="create_operation_example",
                 update_operation="update_operation_example",
@@ -543,6 +572,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LegacyServiceOrderResponse**](LegacyServiceOrderResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthenticated |  -  |
+**403** | Unauthorized |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_service**
+> Service update_service(id, service_update)
+
+Updates a service.
+
+### Example
+
+```python
+import time
+import python_msx_sdk
+from python_msx_sdk.api import services_api
+from python_msx_sdk.model.service import Service
+from python_msx_sdk.model.error import Error
+from python_msx_sdk.model.service_update import ServiceUpdate
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = python_msx_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with python_msx_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = services_api.ServicesApi(api_client)
+    id = "id_example" # str | 
+    service_update = ServiceUpdate(
+        status={
+            "key": None,
+        },
+        definition_attributes={},
+        attributes={},
+    ) # ServiceUpdate | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Updates a service.
+        api_response = api_instance.update_service(id, service_update)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling ServicesApi->update_service: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  |
+ **service_update** | [**ServiceUpdate**](ServiceUpdate.md)|  |
+
+### Return type
+
+[**Service**](Service.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # python_msx_sdk.OffersApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from python_msx_sdk.model.offer_create import OfferCreate
 from python_msx_sdk.model.offer import Offer
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -96,10 +96,10 @@ import python_msx_sdk
 from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -164,10 +164,10 @@ from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.offer import Offer
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -233,10 +233,10 @@ from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.catalog_assignment import CatalogAssignment
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -301,10 +301,10 @@ import python_msx_sdk
 from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -372,10 +372,10 @@ from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.offers_page import OffersPage
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -458,10 +458,10 @@ from python_msx_sdk.model.offer_update import OfferUpdate
 from python_msx_sdk.model.offer import Offer
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -489,7 +489,9 @@ with python_msx_sdk.ApiClient() as api_client:
                 value="value_example",
             ),
         ],
-        approvals={},
+        approvals={
+            "key": None,
+        },
     ) # OfferUpdate | 
 
     # example passing only required values which don't have defaults set
@@ -549,10 +551,10 @@ from python_msx_sdk.api import offers_api
 from python_msx_sdk.model.catalog_assignment import CatalogAssignment
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 

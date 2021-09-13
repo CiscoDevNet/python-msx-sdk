@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **parent_id** | **str, none_type** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | **str, none_type** |  | [optional] 
-**description** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
 **address** | [**SiteAddress**](SiteAddress.md) |  | [optional] 
 **contact** | [**SiteContact**](SiteContact.md) |  | [optional] 
 **image** | **str, none_type** |  | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **status** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **created_on** | **datetime** |  | [optional] [readonly] 
 **created_by** | **str** |  | [optional] [readonly] 
-**modified_on** | **datetime** |  | [optional] [readonly] 
+**modified_on** | **datetime, none_type** |  | [optional] [readonly] 
 **modified_by** | **str** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

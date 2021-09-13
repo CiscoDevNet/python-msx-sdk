@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **version** | **str** |  | [optional] 
+**is_latest_version** | **bool, none_type** |  | [optional] 
 **service_type** | **str** |  | [optional] 
 **device_models** | **[str], none_type** |  | [optional] 
 **config_content** | **str, none_type** |  | [optional] 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 **template_standard** | **str** |  | [optional] 
 **tenant_access** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md) |  | [optional] 
 **template_parameter_validators** | [**[TemplateParameterValidator], none_type**](TemplateParameterValidator.md) |  | [optional] 
+**tags** | **[str], none_type** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

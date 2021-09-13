@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **template_standard** | **str** |  | [optional] 
 **tenant_access** | [**DeviceTemplateAccess**](DeviceTemplateAccess.md) |  | [optional] 
 **template_parameter_validators** | [**[TemplateParameterValidator]**](TemplateParameterValidator.md) |  | [optional] 
+**tags** | **[str], none_type** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

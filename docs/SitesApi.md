@@ -1,6 +1,6 @@
 # python_msx_sdk.SitesApi
 
-All URIs are relative to *http://localhost:8765*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -102,10 +102,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -176,10 +176,10 @@ from python_msx_sdk.model.site_create import SiteCreate
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -243,10 +243,10 @@ import python_msx_sdk
 from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -311,10 +311,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -391,10 +391,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.sites_page import SitesPage
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -405,6 +405,7 @@ with python_msx_sdk.ApiClient() as api_client:
     page = 0 # int | 
     page_size = 10 # int | 
     tenant_id = "tenantId_example" # str |  (optional)
+    include_subtenants = False # bool |  (optional) if omitted the server will use the default value of False
     service_id = "serviceId_example" # str |  (optional)
     service_type = "serviceType_example" # str |  (optional)
     device_id = "deviceId_example" # str |  (optional)
@@ -425,7 +426,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # and optional values
     try:
         # Returns a page of Sites. Only one filter is supported at a time.
-        api_response = api_instance.get_sites_page(page, page_size, tenant_id=tenant_id, service_id=service_id, service_type=service_type, device_id=device_id, parent_id=parent_id, type=type, managing_control_plane_id=managing_control_plane_id, show_image=show_image)
+        api_response = api_instance.get_sites_page(page, page_size, tenant_id=tenant_id, include_subtenants=include_subtenants, service_id=service_id, service_type=service_type, device_id=device_id, parent_id=parent_id, type=type, managing_control_plane_id=managing_control_plane_id, show_image=show_image)
         pprint(api_response)
     except python_msx_sdk.ApiException as e:
         print("Exception when calling SitesApi->get_sites_page: %s\n" % e)
@@ -439,6 +440,7 @@ Name | Type | Description  | Notes
  **page** | **int**|  |
  **page_size** | **int**|  |
  **tenant_id** | **str**|  | [optional]
+ **include_subtenants** | **bool**|  | [optional] if omitted the server will use the default value of False
  **service_id** | **str**|  | [optional]
  **service_type** | **str**|  | [optional]
  **device_id** | **str**|  | [optional]
@@ -486,10 +488,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -559,10 +561,10 @@ from python_msx_sdk.api import sites_api
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
@@ -633,10 +635,10 @@ from python_msx_sdk.model.site_update import SiteUpdate
 from python_msx_sdk.model.site import Site
 from python_msx_sdk.model.error import Error
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8765
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = python_msx_sdk.Configuration(
-    host = "http://localhost:8765"
+    host = "http://localhost"
 )
 
 
