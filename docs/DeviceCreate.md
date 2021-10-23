@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **model** | **str** |  | 
 **type** | **str** |  | 
 **managed** | **bool** |  | defaults to False
-**service_instance_id** | **str** |  | [optional] 
-**subscription_id** | **str** |  | [optional] 
+**service_instance_id** | **str, none_type** |  | [optional] 
+**subscription_id** | **str, none_type** |  | [optional] 
 **service_type** | **str, none_type** |  | [optional] 
 **tags** | **{str: (str,)}, none_type** |  | [optional] 
 **onboard_information** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | [optional] 

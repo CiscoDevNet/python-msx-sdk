@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **product_id** | **str** |  | 
 **version** | **int** |  | 
 **display_order** | **int** |  | 
-**image** | **str** |  | 
-**supported_properties** | **[str]** |  | 
-**supported_options** | [**[NameValue]**](NameValue.md) |  | 
+**image** | **str** |  | [optional] 
 **price** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
+**supported_properties** | **[str]** |  | [optional] 
+**supported_options** | [**[NameValue]**](NameValue.md) |  | [optional] 
 **approvals** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

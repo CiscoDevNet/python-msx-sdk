@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attach_device_templates**](DevicesApi.md#attach_device_templates) | **POST** /manage/api/v8/devices/{id}/templates | Attaches one or more device templates to a device instance.
+[**batch_attach_device_templates**](DevicesApi.md#batch_attach_device_templates) | **POST** /manage/api/v8/devices/templates/attach | Attaches one or more device templates to a batch of device instances.
 [**create_device**](DevicesApi.md#create_device) | **POST** /manage/api/v8/devices | Creates a device.
 [**delete_device**](DevicesApi.md#delete_device) | **DELETE** /manage/api/v8/devices/{id} | Deletes a device.
 [**detach_device_template**](DevicesApi.md#detach_device_template) | **DELETE** /manage/api/v8/devices/{id}/templates/{templateId} | Detaches a template from a device.
@@ -31,6 +32,7 @@ import time
 import python_msx_sdk
 from python_msx_sdk.api import devices_api
 from python_msx_sdk.model.device_template_attach_request import DeviceTemplateAttachRequest
+from python_msx_sdk.model.manage_change_request_pending import ManageChangeRequestPending
 from python_msx_sdk.model.device_template_history import DeviceTemplateHistory
 from python_msx_sdk.model.error import Error
 from pprint import pprint
@@ -94,6 +96,94 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | OK |  -  |
+**202** | Pending Approval |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthenticated |  -  |
+**403** | Unauthorized |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **batch_attach_device_templates**
+> [DeviceTemplateBatchAttachResponse] batch_attach_device_templates(device_template_batch_attach_request)
+
+Attaches one or more device templates to a batch of device instances.
+
+### Example
+
+```python
+import time
+import python_msx_sdk
+from python_msx_sdk.api import devices_api
+from python_msx_sdk.model.manage_change_request_pending import ManageChangeRequestPending
+from python_msx_sdk.model.device_template_batch_attach_request import DeviceTemplateBatchAttachRequest
+from python_msx_sdk.model.device_template_batch_attach_response import DeviceTemplateBatchAttachResponse
+from python_msx_sdk.model.error import Error
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = python_msx_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with python_msx_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = devices_api.DevicesApi(api_client)
+    device_template_batch_attach_request = DeviceTemplateBatchAttachRequest(
+        device_ids=[
+            "device_ids_example",
+        ],
+        template_details=[
+            DeviceTemplateDetails(
+                template_id="template_id_example",
+                template_params=[
+                    NameValue(
+                        name="name_example",
+                        value="value_example",
+                    ),
+                ],
+            ),
+        ],
+    ) # DeviceTemplateBatchAttachRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Attaches one or more device templates to a batch of device instances.
+        api_response = api_instance.batch_attach_device_templates(device_template_batch_attach_request)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling DevicesApi->batch_attach_device_templates: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_template_batch_attach_request** | [**DeviceTemplateBatchAttachRequest**](DeviceTemplateBatchAttachRequest.md)|  |
+
+### Return type
+
+[**[DeviceTemplateBatchAttachResponse]**](DeviceTemplateBatchAttachResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | Pending Approval |  -  |
 **200** | OK |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthenticated |  -  |
@@ -321,6 +411,7 @@ Detach device templates that are already attached to a device.
 import time
 import python_msx_sdk
 from python_msx_sdk.api import devices_api
+from python_msx_sdk.model.manage_change_request_pending import ManageChangeRequestPending
 from python_msx_sdk.model.device_template_history import DeviceTemplateHistory
 from python_msx_sdk.model.error import Error
 from pprint import pprint
@@ -371,6 +462,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
+**202** | Accepted |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized |  -  |
@@ -501,7 +593,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 
 ### HTTP response details
@@ -965,6 +1057,7 @@ Update device templates that are already attached to a device.
 import time
 import python_msx_sdk
 from python_msx_sdk.api import devices_api
+from python_msx_sdk.model.manage_change_request_pending import ManageChangeRequestPending
 from python_msx_sdk.model.device_template_update_request import DeviceTemplateUpdateRequest
 from python_msx_sdk.model.device_template_history import DeviceTemplateHistory
 from python_msx_sdk.model.error import Error
@@ -1030,6 +1123,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
+**202** | Accepted |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized |  -  |
