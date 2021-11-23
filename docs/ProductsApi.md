@@ -592,6 +592,16 @@ with python_msx_sdk.ApiClient() as api_client:
                 ),
             ],
         ),
+        slm_ui_config=ServiceSLMUIConfig(
+            type="type_example",
+            resources=[
+                ServiceUIResource(
+                    type="type_example",
+                    href="href_example",
+                ),
+            ],
+        ),
+        external_id="external_id_example",
         tags=[
             "tags_example",
         ],

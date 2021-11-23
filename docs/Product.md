@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **service_extensions** | [**[NSOConfigDataXPath]**](NSOConfigDataXPath.md) |  | [optional] 
 **service_config_query_root_x_paths** | **[str]** |  | [optional] 
 **ui_config** | [**ServiceUIConfig**](ServiceUIConfig.md) |  | [optional] 
+**slm_ui_config** | [**ServiceSLMUIConfig**](ServiceSLMUIConfig.md) |  | [optional] 
+**external_id** | **str, none_type** |  | [optional] 
 **tags** | **[str], none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

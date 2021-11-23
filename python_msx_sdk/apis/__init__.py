@@ -34,6 +34,9 @@ from python_msx_sdk.api.roles_api import RolesApi
 from python_msx_sdk.api.security_api import SecurityApi
 from python_msx_sdk.api.services_api import ServicesApi
 from python_msx_sdk.api.sites_api import SitesApi
+from python_msx_sdk.api.template_applications_api import TemplateApplicationsApi
+from python_msx_sdk.api.template_assignments_api import TemplateAssignmentsApi
+from python_msx_sdk.api.templates_api import TemplatesApi
 from python_msx_sdk.api.tenants_api import TenantsApi
 from python_msx_sdk.api.users_api import UsersApi
 from python_msx_sdk.api.validation_api import ValidationApi
