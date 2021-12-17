@@ -64,3 +64,13 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Open API artifacts
+.openapi-generator-ignore
+.travis.yml
+.gitlab-ci.yml
+git_push_msx.sh
+.openapi-generator/
+build/
+dist/
+python_msx_sdk.egg-info/
