@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **service_type** | **str** |  | 
 **type** | **str** |  | 
 **id** | **str** |  | [optional] [readonly] 
-**external_id** | **str** |  | [optional] 
+**external_id** | **str, none_type** |  | [optional] 
 **description** | **str** |  | [optional] 
 **subtype** | **str, none_type** |  | [optional] 
 **configuration** | **str** |  | [optional] 
 **attributes** | **{str: (str,)}** |  | [optional] 
 **tags** | **[str]** |  | [optional] 
-**notes** | **str** |  | [optional] 
+**notes** | **str, none_type** |  | [optional] 
 **status** | [**TemplateStatus**](TemplateStatus.md) |  | [optional] 
 **status_details** | **str, none_type** |  | [optional] [readonly] 
 **created_on** | **datetime, none_type** |  | [optional] [readonly] 
