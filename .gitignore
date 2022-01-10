@@ -69,7 +69,7 @@ target/
 .openapi-generator-ignore
 .travis.yml
 .gitlab-ci.yml
-git_push_msx.sh
+git_push_sdk.sh
 .openapi-generator/
 build/
 dist/
