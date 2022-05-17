@@ -20,6 +20,7 @@ Creates a device template.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -58,11 +59,20 @@ with python_msx_sdk.ApiClient() as api_client:
         ),
         template_parameter_validators=[
             TemplateParameterValidator(
-                name="",
-                hint_text="",
-                label="",
-                type="Passwor",
-                display_type="Textare",
+                name='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                hint_text='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                label='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                type="Password",
+                display_type="Textarea",
                 allowed_values=[
                     "allowed_values_example",
                 ],
@@ -105,6 +115,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -121,6 +132,7 @@ No authorization required
 Creates a new version of an existing device template.
 
 ### Example
+
 
 ```python
 import time
@@ -146,11 +158,20 @@ with python_msx_sdk.ApiClient() as api_client:
         config_content="config_content_example",
         template_parameter_validators=[
             TemplateParameterValidator(
-                name="",
-                hint_text="",
-                label="",
-                type="Passwor",
-                display_type="Textare",
+                name='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                hint_text='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                label='''"eiVMSMy;m8X5a	c4rv5kzuY+,8CQgdA*c+^"GKqTVnnV
+Z:zOBO1nvr<tqiK8<Ot,BBSHOb7:gqC*Igoeid'0BW
+UF<<SePV*%j=@dAN,9$^emIe7
+8o/ZRCEW4J;07HdF% </7$Z^@RsdoP/0h#GXx977D=R*'+5TaOkC:pUiK+2QCNN.gBF''',
+                type="Password",
+                display_type="Textarea",
                 allowed_values=[
                     "allowed_values_example",
                 ],
@@ -190,6 +211,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -206,6 +228,7 @@ No authorization required
 Deletes a device template.
 
 ### Example
+
 
 ```python
 import time
@@ -256,6 +279,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -273,6 +297,7 @@ No authorization required
 Returns a device template.
 
 ### Example
+
 
 ```python
 import time
@@ -325,6 +350,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -342,6 +368,7 @@ No authorization required
 Returns a list of device templates.
 
 ### Example
+
 
 ```python
 import time
@@ -399,6 +426,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -415,6 +443,7 @@ No authorization required
 API to scan parameters from the device template XML.
 
 ### Example
+
 
 ```python
 import time
@@ -467,6 +496,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Ok |  -  |
@@ -483,6 +513,7 @@ No authorization required
 Updates device template access.
 
 ### Example
+
 
 ```python
 import time
@@ -543,6 +574,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **end_date** | **str** | License usage expiration date in yyyy-mm-dd format | [optional] [readonly] 
 **subscription_id** | **str** | Subscription refence id | [optional] [readonly] 
 **status** | **str** | Licencse usage status | [optional] [readonly] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,7 +12,9 @@ Name | Type | Description | Notes
 **contact** | [**SiteContact**](SiteContact.md) |  | [optional] 
 **location** | [**SiteLocation**](SiteLocation.md) |  | [optional] 
 **image** | **str** |  | [optional] 
+**managing_control_plane_id** | **str, none_type** |  | [optional] 
 **attributes** | **{str: (str,)}** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

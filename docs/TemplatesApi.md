@@ -19,6 +19,7 @@ Deletes a template.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -68,6 +69,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -85,6 +87,7 @@ No authorization required
 Returns a template by id.
 
 ### Example
+
 
 ```python
 import time
@@ -137,6 +140,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -154,6 +158,7 @@ No authorization required
 Returns a template history by id.
 
 ### Example
+
 
 ```python
 import time
@@ -206,6 +211,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -223,6 +229,7 @@ No authorization required
 Returns a page of templates.
 
 ### Example
+
 
 ```python
 import time
@@ -296,6 +303,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -312,6 +320,7 @@ No authorization required
 Imports a template.
 
 ### Example
+
 
 ```python
 import time
@@ -380,6 +389,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |
@@ -396,6 +406,7 @@ No authorization required
 Updates a template status.
 
 ### Example
+
 
 ```python
 import time
@@ -467,6 +478,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

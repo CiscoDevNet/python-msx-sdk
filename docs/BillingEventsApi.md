@@ -18,6 +18,7 @@ Needs VIEW_COSTS permission to view cost details.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -84,6 +85,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -102,6 +104,7 @@ Get an Event.
 Needs VIEW_EVENTS permission to get a billing event.
 
 ### Example
+
 
 ```python
 import time
@@ -154,6 +157,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -173,6 +177,7 @@ Retrieve a page of events for tenant.
 Needs VIEW_EVENTS permission to view the billing events.
 
 ### Example
+
 
 ```python
 import time
@@ -246,6 +251,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

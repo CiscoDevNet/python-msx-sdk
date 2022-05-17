@@ -15,6 +15,7 @@ Method | HTTP request | Description
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -67,6 +68,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -83,6 +85,7 @@ No authorization required
 
 
 ### Example
+
 
 ```python
 import time
@@ -136,6 +139,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -20,6 +20,7 @@ Creates a ServiceNow configuration.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -39,7 +40,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = incident_configurations_api.IncidentConfigurationsApi(api_client)
-    service_now_configuration_create = ServiceNowConfigurationCreate() # ServiceNowConfigurationCreate | 
+    service_now_configuration_create = ServiceNowConfigurationCreate(None) # ServiceNowConfigurationCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -72,6 +73,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -91,6 +93,7 @@ Deletes a ServiceNow configuration.
 Delete service now configuration, only if no associated entities exists.
 
 ### Example
+
 
 ```python
 import time
@@ -141,6 +144,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -158,6 +162,7 @@ No authorization required
 API to get configuration of encloud service.
 
 ### Example
+
 
 ```python
 import time
@@ -206,6 +211,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -222,6 +228,7 @@ No authorization required
 Returns a ServiceNow configuration.
 
 ### Example
+
 
 ```python
 import time
@@ -274,6 +281,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -291,6 +299,7 @@ No authorization required
 Returns a ServiceNow configurations.
 
 ### Example
+
 
 ```python
 import time
@@ -358,6 +367,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -374,6 +384,7 @@ No authorization required
 API to patch configure encloud service
 
 ### Example
+
 
 ```python
 import time
@@ -434,6 +445,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -450,6 +462,7 @@ No authorization required
 API to configure encloud service.
 
 ### Example
+
 
 ```python
 import time
@@ -511,6 +524,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -22,6 +22,7 @@ Delete a workflow.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -71,6 +72,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -88,6 +90,7 @@ No authorization required
 Exports a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -139,6 +142,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -156,6 +160,7 @@ No authorization required
 Returns a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -208,6 +213,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -225,6 +231,7 @@ No authorization required
 Returns a workflow start config.
 
 ### Example
+
 
 ```python
 import time
@@ -277,6 +284,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -294,6 +302,7 @@ No authorization required
 Returns a list of workflows.
 
 ### Example
+
 
 ```python
 import time
@@ -349,6 +358,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -365,6 +375,7 @@ No authorization required
 Imports a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -434,6 +445,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -450,6 +462,7 @@ No authorization required
 Starts a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -473,7 +486,7 @@ with python_msx_sdk.ApiClient() as api_client:
     id = "id_example" # str | 
     workflow_start_config = WorkflowStartConfig(
         input_variables=[
-            WorkflowVariable(),
+            WorkflowVariable(None),
         ],
         type_of_target_needed="type_of_target_needed_example",
         target_id="target_id_example",
@@ -522,6 +535,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -539,6 +553,7 @@ No authorization required
 Updates a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -610,6 +625,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -626,6 +642,7 @@ No authorization required
 Validates a workflow.
 
 ### Example
+
 
 ```python
 import time
@@ -678,6 +695,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

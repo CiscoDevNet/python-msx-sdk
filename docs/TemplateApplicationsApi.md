@@ -19,6 +19,7 @@ Applies a template to a target.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -80,6 +81,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |
@@ -97,6 +99,7 @@ No authorization required
 Deletes a template application.
 
 ### Example
+
 
 ```python
 import time
@@ -147,6 +150,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -164,6 +168,7 @@ No authorization required
 Gets a template application.
 
 ### Example
+
 
 ```python
 import time
@@ -216,6 +221,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -233,6 +239,7 @@ No authorization required
 Gets a template application history.
 
 ### Example
+
 
 ```python
 import time
@@ -285,6 +292,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -302,6 +310,7 @@ No authorization required
 Get a page of template applications.
 
 ### Example
+
 
 ```python
 import time
@@ -379,6 +388,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -395,6 +405,7 @@ No authorization required
 Updates an application status.
 
 ### Example
+
 
 ```python
 import time
@@ -453,6 +464,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

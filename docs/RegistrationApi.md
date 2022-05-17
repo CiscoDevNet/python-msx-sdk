@@ -16,6 +16,7 @@ Delete a registration.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -65,6 +66,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -81,6 +83,7 @@ No authorization required
 Returns a filtered page of registered products / versions.
 
 ### Example
+
 
 ```python
 import time
@@ -148,6 +151,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -164,6 +168,7 @@ No authorization required
 Register a product / verison combination for vulnerability inspection.
 
 ### Example
+
 
 ```python
 import time
@@ -220,6 +225,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | OK |  -  |

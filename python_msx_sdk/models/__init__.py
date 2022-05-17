@@ -42,7 +42,7 @@ from python_msx_sdk.model.change_requests_page_all_of import ChangeRequestsPageA
 from python_msx_sdk.model.cost_summary import CostSummary
 from python_msx_sdk.model.device import Device
 from python_msx_sdk.model.device_all_of import DeviceAllOf
-from python_msx_sdk.model.device_compliance_state import DeviceComplianceState
+from python_msx_sdk.model.device_config_update import DeviceConfigUpdate
 from python_msx_sdk.model.device_create import DeviceCreate
 from python_msx_sdk.model.device_create_all_of import DeviceCreateAllOf
 from python_msx_sdk.model.device_patch import DevicePatch
@@ -62,7 +62,6 @@ from python_msx_sdk.model.device_template_update_request import DeviceTemplateUp
 from python_msx_sdk.model.device_template_version_create import DeviceTemplateVersionCreate
 from python_msx_sdk.model.device_update import DeviceUpdate
 from python_msx_sdk.model.device_update_all_of import DeviceUpdateAllOf
-from python_msx_sdk.model.device_vulnerability_state import DeviceVulnerabilityState
 from python_msx_sdk.model.devices_page import DevicesPage
 from python_msx_sdk.model.devices_page_all_of import DevicesPageAllOf
 from python_msx_sdk.model.error import Error

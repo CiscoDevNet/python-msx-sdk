@@ -16,6 +16,7 @@ Returns a filtered page of ingest tasks.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -82,6 +83,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -98,6 +100,7 @@ No authorization required
 Returns a filtered page of vulnerabilities.
 
 ### Example
+
 
 ```python
 import time
@@ -182,6 +185,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -198,6 +202,7 @@ No authorization required
 Ingests a CVE JSON feed into the Vulnerability Service datastore.
 
 ### Example
+
 
 ```python
 import time
@@ -254,6 +259,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |

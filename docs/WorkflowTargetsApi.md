@@ -18,6 +18,7 @@ Creates a new workflow target.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -37,7 +38,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workflow_targets_api.WorkflowTargetsApi(api_client)
-    workflow_target_create = WorkflowTargetCreate() # WorkflowTargetCreate | 
+    workflow_target_create = WorkflowTargetCreate(None) # WorkflowTargetCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -70,6 +71,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -86,6 +88,7 @@ No authorization required
 Deletes a workflow target.
 
 ### Example
+
 
 ```python
 import time
@@ -136,6 +139,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -153,6 +157,7 @@ No authorization required
 Returns a workflow target.
 
 ### Example
+
 
 ```python
 import time
@@ -205,6 +210,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -222,6 +228,7 @@ No authorization required
 Returns a list of workflow targets.
 
 ### Example
+
 
 ```python
 import time
@@ -277,6 +284,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -293,6 +301,7 @@ No authorization required
 Updates a workflow target.
 
 ### Example
+
 
 ```python
 import time
@@ -358,6 +367,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

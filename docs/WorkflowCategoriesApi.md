@@ -18,6 +18,7 @@ Creates a new workflow category.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -78,6 +79,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -94,6 +96,7 @@ No authorization required
 Deletes a workflow category.
 
 ### Example
+
 
 ```python
 import time
@@ -144,6 +147,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -161,6 +165,7 @@ No authorization required
 Returns a list of workflow categories.
 
 ### Example
+
 
 ```python
 import time
@@ -214,6 +219,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -230,6 +236,7 @@ No authorization required
 Returns a workflow category.
 
 ### Example
+
 
 ```python
 import time
@@ -282,6 +289,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -299,6 +307,7 @@ No authorization required
 Updates a workflow category.
 
 ### Example
+
 
 ```python
 import time
@@ -360,6 +369,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

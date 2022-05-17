@@ -19,6 +19,7 @@ Cancels an incident.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -39,10 +40,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = incidents_api.IncidentsApi(api_client)
     id = "id_example" # str | 
-    incident_cancel = IncidentCancel(
-        notes="notes_example",
-        tenant="tenant_example",
-    ) # IncidentCancel | 
+    incident_cancel = IncidentCancel(None) # IncidentCancel | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -76,6 +74,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -93,6 +92,7 @@ No authorization required
 Create a new Incident.
 
 ### Example
+
 
 ```python
 import time
@@ -113,7 +113,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = incidents_api.IncidentsApi(api_client)
-    incident_create = IncidentCreate() # IncidentCreate | 
+    incident_create = IncidentCreate(None) # IncidentCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -146,6 +146,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -163,6 +164,7 @@ No authorization required
 Deletes an incident.
 
 ### Example
+
 
 ```python
 import time
@@ -213,6 +215,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -230,6 +233,7 @@ No authorization required
 Get incident details.
 
 ### Example
+
 
 ```python
 import time
@@ -282,6 +286,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -299,6 +304,7 @@ No authorization required
 Get Incidents by filter.
 
 ### Example
+
 
 ```python
 import time
@@ -382,6 +388,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -398,6 +405,7 @@ No authorization required
 Updates an incident.
 
 ### Example
+
 
 ```python
 import time
@@ -419,20 +427,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = incidents_api.IncidentsApi(api_client)
     id = "id_example" # str | 
-    incident_update = IncidentUpdate(
-        attributes={
-            "key": None,
-        },
-        category="inquiry",
-        description="description_example",
-        impact="Low",
-        priority="Planning",
-        severity="Low",
-        state="New",
-        subcategory="subcategory_example",
-        tenant="tenant_example",
-        urgency="Low",
-    ) # IncidentUpdate | 
+    incident_update = IncidentUpdate(None) # IncidentUpdate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -466,6 +461,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

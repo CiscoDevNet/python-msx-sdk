@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**patch_device**](DevicesApi.md#patch_device) | **PATCH** /manage/api/v8/devices/{id} | Update a device.
 [**redeploy_device**](DevicesApi.md#redeploy_device) | **POST** /manage/api/v8/devices/{id}/redeploy | Dedeploys a device.
 [**update_device**](DevicesApi.md#update_device) | **PUT** /manage/api/v8/devices/{id} | Update a device.
+[**update_device_config**](DevicesApi.md#update_device_config) | **POST** /manage/api/v8/devices/{id}/config/update | push device configuration to the actual device
 [**update_device_templates**](DevicesApi.md#update_device_templates) | **PUT** /manage/api/v8/devices/{id}/templates | Update device templates that are already attached to a device.
 
 
@@ -26,6 +27,7 @@ Method | HTTP request | Description
 Attaches one or more device templates to a device instance.
 
 ### Example
+
 
 ```python
 import time
@@ -94,6 +96,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -112,6 +115,7 @@ No authorization required
 Attaches one or more device templates to a batch of device instances.
 
 ### Example
+
 
 ```python
 import time
@@ -181,6 +185,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Pending Approval |  -  |
@@ -199,6 +204,7 @@ No authorization required
 Creates a device.
 
 ### Example
+
 
 ```python
 import time
@@ -219,7 +225,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = devices_api.DevicesApi(api_client)
-    device_create = DeviceCreate() # DeviceCreate | 
+    device_create = DeviceCreate(None) # DeviceCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -252,6 +258,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -268,6 +275,7 @@ No authorization required
 Deletes a device.
 
 ### Example
+
 
 ```python
 import time
@@ -318,6 +326,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -335,6 +344,7 @@ No authorization required
 Detaches a template from a device.
 
 ### Example
+
 
 ```python
 import time
@@ -389,6 +399,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -406,6 +417,7 @@ No authorization required
 Detach device templates that are already attached to a device.
 
 ### Example
+
 
 ```python
 import time
@@ -459,6 +471,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -477,6 +490,7 @@ No authorization required
 Returns a device.
 
 ### Example
+
 
 ```python
 import time
@@ -529,6 +543,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -546,6 +561,7 @@ No authorization required
 Returns the running configuration for a device.
 
 ### Example
+
 
 ```python
 import time
@@ -597,6 +613,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -614,6 +631,7 @@ No authorization required
 Returns device template history.
 
 ### Example
+
 
 ```python
 import time
@@ -677,6 +695,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -695,13 +714,12 @@ Returns a page of devices.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
 from python_msx_sdk.api import devices_api
-from python_msx_sdk.model.device_compliance_state import DeviceComplianceState
 from python_msx_sdk.model.devices_page import DevicesPage
-from python_msx_sdk.model.device_vulnerability_state import DeviceVulnerabilityState
 from python_msx_sdk.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -752,11 +770,11 @@ with python_msx_sdk.ApiClient() as api_client:
         "severities_example",
     ] # [str] |  (optional)
     compliance_states = [
-        DeviceComplianceState("COMPLIANT"),
-    ] # [DeviceComplianceState] |  (optional)
+        "complianceStates_example",
+    ] # [str] | Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN (optional)
     vulnerability_states = [
-        DeviceVulnerabilityState("VULNERABLE"),
-    ] # [DeviceVulnerabilityState] |  (optional)
+        "vulnerabilityStates_example",
+    ] # [str] | Valid values: VULNERABLE, NOT_VULNERABLE, NOT_APPLICABLE, UNKNOWN (optional)
     sort_by = "name" # str |  (optional)
     sort_order = "asc" # str |  (optional) if omitted the server will use the default value of "asc"
 
@@ -797,8 +815,8 @@ Name | Type | Description  | Notes
  **tenant_ids** | **[str]**|  | [optional]
  **include_subtenants** | **bool**|  | [optional] if omitted the server will use the default value of False
  **severities** | **[str]**|  | [optional]
- **compliance_states** | [**[DeviceComplianceState]**](DeviceComplianceState.md)|  | [optional]
- **vulnerability_states** | [**[DeviceVulnerabilityState]**](DeviceVulnerabilityState.md)|  | [optional]
+ **compliance_states** | **[str]**| Valid values: COMPLIANT, NOT_COMPLIANT, APPLICABLE, NOT_APPLICABLE, UNKNOWN | [optional]
+ **vulnerability_states** | **[str]**| Valid values: VULNERABLE, NOT_VULNERABLE, NOT_APPLICABLE, UNKNOWN | [optional]
  **sort_by** | **str**|  | [optional]
  **sort_order** | **str**|  | [optional] if omitted the server will use the default value of "asc"
 
@@ -817,6 +835,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -832,7 +851,10 @@ No authorization required
 
 Update a device.
 
+When present, property values are replaced in their entirety (i.e. object/map values are not merged)
+
 ### Example
+
 
 ```python
 import time
@@ -861,7 +883,10 @@ with python_msx_sdk.ApiClient() as api_client:
         sub_type="sub_type_example",
         serial_key="serial_key_example",
         version="version_example",
-        compliance_state=DeviceComplianceState("COMPLIANT"),
+        compliance_state="compliance_state_example",
+        onboard_information={
+            "key": None,
+        },
     ) # DevicePatch | 
 
     # example passing only required values which don't have defaults set
@@ -896,6 +921,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -913,6 +939,7 @@ No authorization required
 Dedeploys a device.
 
 ### Example
+
 
 ```python
 import time
@@ -963,6 +990,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -980,6 +1008,7 @@ No authorization required
 Update a device.
 
 ### Example
+
 
 ```python
 import time
@@ -1001,7 +1030,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = devices_api.DevicesApi(api_client)
     id = "id_example" # str | 
-    device_update = DeviceUpdate() # DeviceUpdate | 
+    device_update = DeviceUpdate(None) # DeviceUpdate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -1035,9 +1064,89 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthenticated |  -  |
+**403** | Unauthorized |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_device_config**
+> ManageChangeRequestPending update_device_config(id, device_config_update)
+
+push device configuration to the actual device
+
+### Example
+
+
+```python
+import time
+import python_msx_sdk
+from python_msx_sdk.api import devices_api
+from python_msx_sdk.model.manage_change_request_pending import ManageChangeRequestPending
+from python_msx_sdk.model.device_config_update import DeviceConfigUpdate
+from python_msx_sdk.model.error import Error
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = python_msx_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with python_msx_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = devices_api.DevicesApi(api_client)
+    id = "id_example" # str | 
+    device_config_update = DeviceConfigUpdate(
+        correlation_id="correlation_id_example",
+        config_content="config_content_example",
+        format="format_example",
+    ) # DeviceConfigUpdate | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # push device configuration to the actual device
+        api_response = api_instance.update_device_config(id, device_config_update)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling DevicesApi->update_device_config: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  |
+ **device_config_update** | [**DeviceConfigUpdate**](DeviceConfigUpdate.md)|  |
+
+### Return type
+
+[**ManageChangeRequestPending**](ManageChangeRequestPending.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | Pending Approval |  -  |
+**204** | No Content |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized |  -  |
@@ -1052,6 +1161,7 @@ No authorization required
 Update device templates that are already attached to a device.
 
 ### Example
+
 
 ```python
 import time
@@ -1120,6 +1230,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

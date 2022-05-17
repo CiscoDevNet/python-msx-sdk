@@ -14,6 +14,7 @@ Returns a filtered list of licenses.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -67,6 +68,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

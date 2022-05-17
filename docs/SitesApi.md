@@ -22,6 +22,7 @@ Add devices to a site.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -77,6 +78,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -94,6 +96,7 @@ No authorization required
 Add services to a site.
 
 ### Example
+
 
 ```python
 import time
@@ -150,6 +153,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -167,6 +171,7 @@ No authorization required
 Creates a new site.
 
 ### Example
+
 
 ```python
 import time
@@ -187,7 +192,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = sites_api.SitesApi(api_client)
-    site_create = SiteCreate() # SiteCreate | 
+    site_create = SiteCreate(None) # SiteCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -220,6 +225,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -236,6 +242,7 @@ No authorization required
 Deletes a site.
 
 ### Example
+
 
 ```python
 import time
@@ -286,6 +293,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -303,6 +311,7 @@ No authorization required
 Returns a site.
 
 ### Example
+
 
 ```python
 import time
@@ -366,6 +375,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -383,6 +393,7 @@ No authorization required
 Returns a page of Sites. Only one filter is supported at a time.
 
 ### Example
+
 
 ```python
 import time
@@ -464,6 +475,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -480,6 +492,7 @@ No authorization required
 Removes devices from a site.
 
 ### Example
+
 
 ```python
 import time
@@ -536,6 +549,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -553,6 +567,7 @@ No authorization required
 Remove services from a site.
 
 ### Example
+
 
 ```python
 import time
@@ -609,6 +624,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -626,6 +642,7 @@ No authorization required
 Updates a site.
 
 ### Example
+
 
 ```python
 import time
@@ -651,7 +668,7 @@ with python_msx_sdk.ApiClient() as api_client:
         parent_id="parent_id_example",
         name="name_example",
         description="description_example",
-        type="zBAMDTMv2D2ylmgd10Z3U",
+        type="zBAMDTMv2D2ylmgd10Z3UB",
         address=SiteAddress(
             name="name_example",
             company="company_example",
@@ -673,6 +690,7 @@ with python_msx_sdk.ApiClient() as api_client:
             longitude=-180,
         ),
         image="image_example",
+        managing_control_plane_id="managing_control_plane_id_example",
         attributes={
             "key": "key_example",
         },
@@ -721,6 +739,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

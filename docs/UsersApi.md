@@ -20,6 +20,7 @@ Creates a new user.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -39,7 +40,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = users_api.UsersApi(api_client)
-    user_create = UserCreate() # UserCreate | 
+    user_create = UserCreate(None) # UserCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -72,6 +73,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -88,6 +90,7 @@ No authorization required
 Deletes a user by id.
 
 ### Example
+
 
 ```python
 import time
@@ -138,6 +141,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -155,6 +159,7 @@ No authorization required
 Returns the current user.
 
 ### Example
+
 
 ```python
 import time
@@ -203,6 +208,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -218,6 +224,7 @@ No authorization required
 Returns an existing user.
 
 ### Example
+
 
 ```python
 import time
@@ -270,6 +277,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -287,6 +295,7 @@ No authorization required
 Returns a page of users.
 
 ### Example
+
 
 ```python
 import time
@@ -354,6 +363,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -370,6 +380,7 @@ No authorization required
 Updates an existing user.
 
 ### Example
+
 
 ```python
 import time
@@ -398,7 +409,9 @@ with python_msx_sdk.ApiClient() as api_client:
         role_ids=[
             "role_ids_example",
         ],
-        tenant_ids=[],
+        tenant_ids=[
+            "tenant_ids_example",
+        ],
         password_policy_name="password_policy_name_example",
         locale="locale_example",
     ) # UserUpdate | 
@@ -435,6 +448,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -452,6 +466,7 @@ No authorization required
 Update a user password.
 
 ### Example
+
 
 ```python
 import time
@@ -507,6 +522,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |

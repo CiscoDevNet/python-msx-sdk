@@ -20,6 +20,7 @@ Needs MANAGE_PRICES permission to allow for the creation of a price.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -39,7 +40,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = billing_prices_api.BillingPricesApi(api_client)
-    billing_price_create = BillingPriceCreate() # BillingPriceCreate | 
+    billing_price_create = BillingPriceCreate(None) # BillingPriceCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -72,6 +73,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -90,6 +92,7 @@ Delete a price.
 Needs MANAGE_PRICES permission to delete a price.
 
 ### Example
+
 
 ```python
 import time
@@ -140,6 +143,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -158,6 +162,7 @@ Get a price.
 Needs VIEW_PRICES permission to get pricing detail.
 
 ### Example
+
 
 ```python
 import time
@@ -210,6 +215,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -229,6 +235,7 @@ Retrieve a page of prices.
 Needs VIEW_PRICES permission to view the pricing details.
 
 ### Example
+
 
 ```python
 import time
@@ -298,6 +305,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -316,6 +324,7 @@ Update price for an event type and tenant.
 Needs MANAGE_PRICES permission to update a pricing detail.
 
 ### Example
+
 
 ```python
 import time
@@ -381,6 +390,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

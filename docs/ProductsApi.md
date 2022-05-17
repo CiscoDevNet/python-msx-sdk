@@ -21,6 +21,7 @@ Creates a product.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -40,7 +41,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = products_api.ProductsApi(api_client)
-    product_create = ProductCreate() # ProductCreate | 
+    product_create = ProductCreate(None) # ProductCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -73,6 +74,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -89,6 +91,7 @@ No authorization required
 Deletes a product.
 
 ### Example
+
 
 ```python
 import time
@@ -139,9 +142,10 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content |  -  |
+**200** | No Content |  -  |
 **400** | Bad Request |  -  |
 **401** | Unauthenticated |  -  |
 **403** | Unauthorized |  -  |
@@ -156,6 +160,7 @@ No authorization required
 Returns a product.
 
 ### Example
+
 
 ```python
 import time
@@ -208,6 +213,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -225,6 +231,7 @@ No authorization required
 Returns a list of tenant assignments for a product .
 
 ### Example
+
 
 ```python
 import time
@@ -277,6 +284,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -294,6 +302,7 @@ No authorization required
 Returns the number of products.
 
 ### Example
+
 
 ```python
 import time
@@ -346,6 +355,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -362,6 +372,7 @@ No authorization required
 Returns a page of products.
 
 ### Example
+
 
 ```python
 import time
@@ -427,6 +438,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -443,6 +455,7 @@ No authorization required
 Updates a product.
 
 ### Example
+
 
 ```python
 import time
@@ -519,9 +532,7 @@ with python_msx_sdk.ApiClient() as api_client:
                     additional_periodic_price="additional_periodic_price_example",
                     additional_quantity=1,
                 ),
-                child_elements=[
-                    ServiceElement(ServiceElement),
-                ],
+                child_elements=None,
             ),
         ],
         properties=[
@@ -537,9 +548,17 @@ with python_msx_sdk.ApiClient() as api_client:
                 max_limit="max_limit_example",
                 min_limit="min_limit_example",
                 value="value_example",
-                value_list=None,
-                allowed_option_values=[],
-                allowed_values=None,
+                value_list=[
+                    {},
+                ],
+                allowed_option_values=[
+                    "allowed_option_values_example",
+                ],
+                allowed_values=[
+                    {
+                        "key": None,
+                    },
+                ],
                 mandatory=True,
                 section="section_example",
                 billable=True,
@@ -639,6 +658,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -656,6 +676,7 @@ No authorization required
 Updates the tenant assignments for a product.
 
 ### Example
+
 
 ```python
 import time
@@ -710,6 +731,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | 
 **product_id** | **str** |  | 
 **version** | **int** |  | 
-**display_order** | **int** |  | 
+**display_order** | **int, none_type** |  | [optional] 
 **image** | **str** |  | [optional] 
 **price** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

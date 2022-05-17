@@ -21,6 +21,7 @@ Needs MANAGE_BILLINGCYCLE permission to allow for the creation a billing cycle.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -40,7 +41,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = billing_cycles_api.BillingCyclesApi(api_client)
-    billing_cycle_create = BillingCycleCreate() # BillingCycleCreate | 
+    billing_cycle_create = BillingCycleCreate(None) # BillingCycleCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -73,6 +74,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -92,6 +94,7 @@ Delete a billing cycle.
 Needs MANAGE_BILLINGCYCLE permission to delete a billing cycle.
 
 ### Example
+
 
 ```python
 import time
@@ -142,6 +145,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -160,6 +164,7 @@ Get a billing cycle.
 Needs VIEW_BILLINGCYCLE permission to get billing cycle detail.
 
 ### Example
+
 
 ```python
 import time
@@ -212,6 +217,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -231,6 +237,7 @@ Retrieve a page of billing cycles.
 Needs VIEW_BILLINGCYCLE permission to view the billing cycle details.
 
 ### Example
+
 
 ```python
 import time
@@ -298,6 +305,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -316,6 +324,7 @@ Process a billing cycle.
 Needs MANAGE_BILLINGCYCLE permission to allow for the creation a billing cycle.
 
 ### Example
+
 
 ```python
 import time
@@ -337,7 +346,7 @@ with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = billing_cycles_api.BillingCyclesApi(api_client)
     billing_cycle_process = BillingCycleProcess(
-        next_billed_on="2020-09-18T18:37:33.810Z",
+        next_billed_on=dateutil_parser('2020-09-18T18:37:33.81Z'),
     ) # BillingCycleProcess | 
 
     # example passing only required values which don't have defaults set
@@ -371,6 +380,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |
@@ -389,6 +399,7 @@ Update billing cycle for an event type and tenant.
 Needs MANAGE_BILLINGCYCLE permission to update a billing cycle detail.
 
 ### Example
+
 
 ```python
 import time
@@ -412,8 +423,8 @@ with python_msx_sdk.ApiClient() as api_client:
     id = "id_example" # str | 
     billing_cycle_update = BillingCycleUpdate(
         event_id="event_id_example",
-        last_billed_on="2020-09-18T18:37:33.810Z",
-        next_billed_on="2020-09-18T18:37:33.810Z",
+        last_billed_on=dateutil_parser('2020-09-18T18:37:33.81Z'),
+        next_billed_on=dateutil_parser('2020-09-18T18:37:33.81Z'),
         tenant_id="tenant_id_example",
     ) # BillingCycleUpdate | 
 
@@ -449,6 +460,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_tenant**](TenantsApi.md#create_tenant) | **POST** /idm/api/v8/tenants | Creates a new tenant.
 [**delete_tenant**](TenantsApi.md#delete_tenant) | **DELETE** /idm/api/v8/tenants/{id} | Deletes a tenant by id.
 [**get_tenant**](TenantsApi.md#get_tenant) | **GET** /idm/api/v8/tenants/{id} | Returns a tenant by id.
+[**get_tenant_by_external_id**](TenantsApi.md#get_tenant_by_external_id) | **GET** /idm/api/v8/tenants/externalId/{externalId} | Returns a tenant by externalId.
 [**get_tenants_list**](TenantsApi.md#get_tenants_list) | **GET** /idm/api/v8/tenants/list | Returns a list of tenants.
 [**get_tenants_page**](TenantsApi.md#get_tenants_page) | **GET** /idm/api/v8/tenants | Returns a page of tenants.
 [**update_tenant**](TenantsApi.md#update_tenant) | **PUT** /idm/api/v8/tenants/{id} | Updates a tenant by id.
@@ -18,6 +19,7 @@ Method | HTTP request | Description
 Creates a new tenant.
 
 ### Example
+
 
 ```python
 import time
@@ -38,7 +40,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = tenants_api.TenantsApi(api_client)
-    tenant_create = TenantCreate() # TenantCreate | 
+    tenant_create = TenantCreate(None) # TenantCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -71,6 +73,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -87,6 +90,7 @@ No authorization required
 Deletes a tenant by id.
 
 ### Example
+
 
 ```python
 import time
@@ -137,6 +141,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -155,6 +160,7 @@ No authorization required
 Returns a tenant by id.
 
 ### Example
+
 
 ```python
 import time
@@ -207,6 +213,89 @@ No authorization required
 
 
 ### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**400** | Bad Request |  -  |
+**401** | Unauthenticated |  -  |
+**403** | Unauthorized |  -  |
+**404** | Not Found |  -  |
+**500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_tenant_by_external_id**
+> Tenant get_tenant_by_external_id(external_id)
+
+Returns a tenant by externalId.
+
+### Example
+
+
+```python
+import time
+import python_msx_sdk
+from python_msx_sdk.api import tenants_api
+from python_msx_sdk.model.tenant import Tenant
+from python_msx_sdk.model.error import Error
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = python_msx_sdk.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with python_msx_sdk.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = tenants_api.TenantsApi(api_client)
+    external_id = "externalId_example" # str | 
+    show_image = False # bool |  (optional) if omitted the server will use the default value of False
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Returns a tenant by externalId.
+        api_response = api_instance.get_tenant_by_external_id(external_id)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling TenantsApi->get_tenant_by_external_id: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns a tenant by externalId.
+        api_response = api_instance.get_tenant_by_external_id(external_id, show_image=show_image)
+        pprint(api_response)
+    except python_msx_sdk.ApiException as e:
+        print("Exception when calling TenantsApi->get_tenant_by_external_id: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **external_id** | **str**|  |
+ **show_image** | **bool**|  | [optional] if omitted the server will use the default value of False
+
+### Return type
+
+[**Tenant**](Tenant.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -224,6 +313,7 @@ No authorization required
 Returns a list of tenants.
 
 ### Example
+
 
 ```python
 import time
@@ -289,6 +379,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -305,6 +396,7 @@ No authorization required
 Returns a page of tenants.
 
 ### Example
+
 
 ```python
 import time
@@ -376,6 +468,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -392,6 +485,7 @@ No authorization required
 Updates a tenant by id.
 
 ### Example
+
 
 ```python
 import time
@@ -453,6 +547,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

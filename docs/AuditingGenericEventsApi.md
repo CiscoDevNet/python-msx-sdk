@@ -16,6 +16,7 @@ Needs CREATE_AUDIT_GENERIC_EVENT_PERMISSION to create a Generic Event.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -91,6 +92,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |

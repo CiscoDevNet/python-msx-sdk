@@ -19,6 +19,7 @@ Assigns a template to one or more tenants.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -85,6 +86,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |
@@ -102,6 +104,7 @@ No authorization required
 Unassigns a template from one or more tenants.
 
 ### Example
+
 
 ```python
 import time
@@ -158,6 +161,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **202** | Accepted |  -  |
@@ -175,6 +179,7 @@ No authorization required
 Gets a template assignment.
 
 ### Example
+
 
 ```python
 import time
@@ -227,6 +232,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -244,6 +250,7 @@ No authorization required
 Gets a template assignment history.
 
 ### Example
+
 
 ```python
 import time
@@ -296,6 +303,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -313,6 +321,7 @@ No authorization required
 Returns a page of template assignments.
 
 ### Example
+
 
 ```python
 import time
@@ -382,6 +391,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -399,6 +409,7 @@ No authorization required
 Updates a template assignment status.
 
 ### Example
+
 
 ```python
 import time
@@ -457,6 +468,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

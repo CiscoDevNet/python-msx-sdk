@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **name** | **str** | User friendly display name for the license | [optional] [readonly] 
 **enforced** | **bool** | Identifies if the tag is for an enforced license or not | [optional] [readonly] 
 **license_details** | [**[LicenseDetails]**](LicenseDetails.md) |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -21,6 +21,7 @@ Creates a product offer.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -40,7 +41,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = offers_api.OffersApi(api_client)
-    offer_create = OfferCreate() # OfferCreate | 
+    offer_create = OfferCreate(None) # OfferCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -73,6 +74,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -89,6 +91,7 @@ No authorization required
 Deletes a product offer
 
 ### Example
+
 
 ```python
 import time
@@ -139,6 +142,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -156,6 +160,7 @@ No authorization required
 Returns a product offer.
 
 ### Example
+
 
 ```python
 import time
@@ -208,6 +213,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -225,6 +231,7 @@ No authorization required
 Returns a list of tenant assignments for a product offer.
 
 ### Example
+
 
 ```python
 import time
@@ -277,6 +284,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -294,6 +302,7 @@ No authorization required
 Returns the number of product offers.
 
 ### Example
+
 
 ```python
 import time
@@ -348,6 +357,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -364,6 +374,7 @@ No authorization required
 Returns a page of product offers.
 
 ### Example
+
 
 ```python
 import time
@@ -433,6 +444,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -449,6 +461,7 @@ No authorization required
 Updates a product offer.
 
 ### Example
+
 
 ```python
 import time
@@ -526,6 +539,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -543,6 +557,7 @@ No authorization required
 Updates the tenant assignemnts for a product offer.
 
 ### Example
+
 
 ```python
 import time
@@ -597,6 +612,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

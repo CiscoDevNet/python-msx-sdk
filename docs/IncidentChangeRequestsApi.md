@@ -18,6 +18,7 @@ Create a change request.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -37,7 +38,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = incident_change_requests_api.IncidentChangeRequestsApi(api_client)
-    change_request_create = ChangeRequestCreate() # ChangeRequestCreate | 
+    change_request_create = ChangeRequestCreate(None) # ChangeRequestCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -70,6 +71,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -87,6 +89,7 @@ No authorization required
 Deletes a change request.
 
 ### Example
+
 
 ```python
 import time
@@ -147,6 +150,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -164,6 +168,7 @@ No authorization required
 Returns a change request.
 
 ### Example
+
 
 ```python
 import time
@@ -227,6 +232,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -244,6 +250,7 @@ No authorization required
 Returns a filtered list of change requests.
 
 ### Example
+
 
 ```python
 import time
@@ -309,6 +316,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -327,6 +335,7 @@ Updates a change request.
 Update change requests. Returns not found, if passed in tenant's serviceNow instance does not hold the record.
 
 ### Example
+
 
 ```python
 import time
@@ -387,6 +396,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

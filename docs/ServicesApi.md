@@ -19,6 +19,7 @@ Deletes a service.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -68,6 +69,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -85,6 +87,7 @@ No authorization required
 Returns a service.
 
 ### Example
+
 
 ```python
 import time
@@ -137,6 +140,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -153,6 +157,7 @@ No authorization required
 Returns a page of services.
 
 ### Example
+
 
 ```python
 import time
@@ -220,6 +225,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -236,6 +242,7 @@ No authorization required
 Submits an order.
 
 ### Example
+
 
 ```python
 import time
@@ -402,6 +409,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -418,6 +426,7 @@ No authorization required
 Updates an order.
 
 ### Example
+
 
 ```python
 import time
@@ -584,6 +593,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -600,6 +610,7 @@ No authorization required
 Updates a service.
 
 ### Example
+
 
 ```python
 import time
@@ -625,8 +636,12 @@ with python_msx_sdk.ApiClient() as api_client:
         status={
             "key": None,
         },
-        definition_attributes={},
-        attributes={},
+        definition_attributes={
+            "key": None,
+        },
+        attributes={
+            "key": None,
+        },
     ) # ServiceUpdate | 
 
     # example passing only required values which don't have defaults set
@@ -661,6 +676,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |

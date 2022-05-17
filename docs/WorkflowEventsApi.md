@@ -18,6 +18,7 @@ Creates a new workflow event.
 
 ### Example
 
+
 ```python
 import time
 import python_msx_sdk
@@ -37,7 +38,7 @@ configuration = python_msx_sdk.Configuration(
 with python_msx_sdk.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workflow_events_api.WorkflowEventsApi(api_client)
-    workflow_event_create = WorkflowEventCreate() # WorkflowEventCreate | 
+    workflow_event_create = WorkflowEventCreate(None) # WorkflowEventCreate | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -70,6 +71,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
@@ -86,6 +88,7 @@ No authorization required
 Deletes a workflow event.
 
 ### Example
+
 
 ```python
 import time
@@ -136,6 +139,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | No Content |  -  |
@@ -153,6 +157,7 @@ No authorization required
 Returns a workflow event.
 
 ### Example
+
 
 ```python
 import time
@@ -205,6 +210,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -222,6 +228,7 @@ No authorization required
 Returns a list of workflow events.
 
 ### Example
+
 
 ```python
 import time
@@ -270,6 +277,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
@@ -286,6 +294,7 @@ No authorization required
 Updates a workflow event.
 
 ### Example
+
 
 ```python
 import time
@@ -349,6 +358,7 @@ No authorization required
 
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  -  |
